@@ -7,8 +7,8 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = {
   key: 'root',
   storage,
-  // whiteList,
-  // blackList,
+  whiteList: ['filters'],
+  blackList: ['positions'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
